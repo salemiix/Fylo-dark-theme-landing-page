@@ -1,0 +1,37 @@
+@use "../shared/variables" as *;
+@use "../shared/mixins" as *;
+
+.contact {
+  background-color: $DarkBluTestimonial;
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 70px;
+  @include breakpoint-down(medium) {
+    top: 0;
+    width: 95%;
+  }
+
+  &__content {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  &__form {
+    .btn {
+      border: none;
+      padding: 10px 40px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      margin-left: 35px;
+      @include breakpoint-down(medium) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}

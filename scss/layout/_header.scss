@@ -1,0 +1,50 @@
+@use "../shared/variables" as *;
+@use "../shared/mixins" as *;
+.header {
+  background-color: $DarkBlueIntro;
+  padding: 40px 0;
+
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+      padding: 20px;
+      font-weight: 700;
+      color: rgb(168, 165, 165);
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $White;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .landing {
+    width: 50%;
+    text-align: center;
+    margin: 30px auto;
+    @include breakpoint-down(small) {
+      width: 90%;
+    }
+
+    &__content {
+      h1 {
+        @include breakpoint-down(small) {
+          font-weight: 700;
+          font-size: 27px;
+          width: 100%;
+        }
+      }
+
+      p {
+        line-height: 1.8;
+        width: 80%;
+        margin: 20px auto;
+        @include breakpoint-down(small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

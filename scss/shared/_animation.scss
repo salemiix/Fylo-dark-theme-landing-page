@@ -1,0 +1,25 @@
+.fade-in{
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+  }
+
+
+.left-side{
+    transform: translateX(-100%);
+}
+.right-side{
+    transform: translateX(100%);
+}
+.left-side,
+.right-side{   
+    transition: transform 2s ease-in-out;
+}
+.left-side.appear,
+.right-side.appear{
+    transform: translateX(0);
+}
+

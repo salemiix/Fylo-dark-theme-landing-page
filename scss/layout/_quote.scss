@@ -1,0 +1,61 @@
+@use "../shared/variables" as *;
+@use "../shared/mixins" as *;
+
+.quote {
+  background-color: $DarkBlueMain;
+  padding: 60px 0;
+  justify-content: space-around;
+  align-items: center;
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card {
+    background-color: $DarkBluTestimonial;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 360px;
+    height: 210px;
+    position: relative;
+    z-index: 2;
+    @include breakpoint-down(small) {
+      margin-bottom: 50px;
+    }
+
+    &:first-of-type {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../../images/bg-quotes.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -34px;
+        left: 2px;
+        width: 62px;
+        height: 52px;
+        z-index: 1;
+      }
+    }
+
+    &__info {
+      align-items: center;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      > div {
+        h3 {
+          margin: 0;
+        }
+        small {
+          color: $White;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
